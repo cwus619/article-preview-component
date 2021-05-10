@@ -1,25 +1,30 @@
 .attribution { 
-    font-size: 11px; 
-    text-align: center;  
-    position: fixed;
-    bottom: 10px; 
+  font-size: 11px; 
+  text-align: center;  
+  position: fixed;
+  bottom: 10px; 
 }
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
 
-body{
+html, body{
+  height:100%;
+}
+
+body{  
   font-family: 'Manrope', sans-serif;
   display:grid;
   background-color: hsl(210, 46%, 95%);
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 200px auto auto 20px;
+  /* grid-template-rows: 200px auto auto 20px; */
+  grid-template-rows: 31% 38% 21% 10%;
   margin:0px;
+  position: relative;
 }
 
 .container{
   border: hidden;
-  position: relative;
   background-color: white;
   border-radius: 25px;
   grid-column-start: 2;
@@ -28,39 +33,43 @@ body{
   grid-row-end: 3;
   display:grid;
   min-height: 250px;
+  height: 299.81px;
   display: flex;
   flex-direction: row;
-  max-width: 850px;
-  /* overflow: hidden; */
+  max-width: 800px;
+  overflow: hidden;
 }
+
 .article-image{
   max-width: 325px;
   overflow: hidden;
   max-height: inherit;
 }
+
 .drawers{
   max-width: 375px;
 }
+
 .text{
   display:grid;
   max-width: 475px;
-  grid-template-columns: 30px auto 50px 30px;
+  grid-template-columns: 10px 10px 10px auto 50px 10px 10px 10px;
   grid-template-rows: 20px 130px 80px 50px 20px;
 }
 h1{
   font-size: 25px;
 }
 .headline{
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 3;
   max-width: 415px;
 }
 .blurb{
   color:  hsl(217, 19%, 35%);
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4;
   font-size: 14px;
@@ -70,8 +79,8 @@ h1{
 .author{
   max-height:50px;
   display: flex;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
   grid-row-start: 4;
   grid-row-end: 5;
   max-width: 415px;
@@ -114,7 +123,6 @@ h1{
 
 /* code from http://projects.verou.me/bubbly/ for speech bubble */
 .social-media{
-  /* position: relative; */
   background: #48556a;
   border-radius: .4em;
   display:none;
@@ -125,9 +133,10 @@ h1{
   position: absolute;
   border: hidden;
   border-radius: 15px;
-  bottom:90px;
+  bottom:320px;
   color:hsl(212, 23%, 69%);
   padding:10px;
+  z-index: 1;
 }
 
 .social-media:after {
@@ -152,17 +161,74 @@ li{
   padding:10px;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:1555px) {
   body{
+    grid-template-columns: 15% 70% 15%;
+  }
+
+  .headline{
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+
+  .blurb{
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+  .author{
+    grid-column-start: 3;
+    grid-column-end: 7;
+  }
+}
+
+@media screen and (max-width:1081px) {
+  body{
+    grid-template-columns: 10% 80% 10%;
+  } 
+  .headline{
+    grid-column-start: 2;
+    grid-column-end: 8;
+  }
+
+  .blurb{
+    grid-column-start: 2;
+    grid-column-end: 8;
+  }
+  .author{
+    grid-column-start: 2;
+    grid-column-end: 8;
+  }
+}
+
+@media screen and (max-width:925px) {
+  body{
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+
+@media screen and (max-width:825px) {
+  body{
+    grid-template-columns: 5% 90% 5%;
+  }
+  .text{
+    grid-template-rows: 5px 150px 80px 50px 20px;
+  }
+}
+
+@media screen and (max-width:653px) {
+  body{
+    height: initial;
     display:flex;
     align-content: center;
     justify-content: center;
+    position:initial;
   }
   .container{
-    margin-top: 50px;
+    margin-top: 100px;
     flex-direction: column;
     max-width: 300px;
-    overflow: hidden;
+    height: 516px;
+    position: relative;
   }
   .article-image{
     overflow:hidden;
