@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I used this challenge as my first step into using some simple CSS Grid; I found that using CSS Grid made placement of most elements on the page a lot easier than when using flexbox, especially for this particular challenge.
+I used this challenge as my first step into using some simple CSS Grid; I found that using CSS Grid made placement of most elements on the page a lot easier than when using flexbox, especially for this particular challenge. I have in the meantime also made further amendments to the grid, switching from a fixed pixel widths/heights to percentages.
 This was also the first time I used the <svg> tag. I had initially added all SVG files in as images, and this is still the case for the social medica icons; however, given that the colouring of the share arrow could not be amended like this, the only way for me to complete the challenge in accordance with the prescribed specifications, I had add in this image within the <svg> tag.
 
 ### Continued development
